@@ -1,0 +1,48 @@
+- name: 'Fulano'
+  age: 40
+  gender: male
+  has_vehicle: true
+  license_type: C
+  is_loaded: true
+  vehicle_type: 3
+
+- name: 'Beltrano'
+  age: 38
+  gender: male
+  has_vehicle: false
+  license_type: E
+  is_loaded: true
+  vehicle_type: 2
+
+- name: 'Cicrana'
+  age: 42
+  gender: female
+  has_vehicle: false
+  license_type: D
+  is_loaded: false
+  vehicle_type: 4
+
+- name: 'Deltrano'
+  age: 50
+  gender: male
+  has_vehicle: true
+  license_type: C
+  is_loaded: true
+  vehicle_type: 1
+
+- name: 'Eltrana'
+  age: 46
+  gender: female
+  has_vehicle: true
+  license_type: E
+  is_loaded: true
+  vehicle_type: 5
+
+- name: 'Geltano'
+  age: 55
+  gender: male
+  has_vehicle: false
+  license_type: E
+  is_loaded: false
+  vehicle_type: 2
+
