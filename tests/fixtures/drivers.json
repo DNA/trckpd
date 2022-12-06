@@ -1,0 +1,74 @@
+[
+  {
+    "_id": {
+      "$oid": "F0123456789ABCDEF0123456"
+    },
+    "name": "Fulano",
+    "age": 40,
+    "gender": "male",
+    "has_vehicle": true,
+    "license_type": "C",
+    "is_loaded": true,
+    "vehicle_type": 3
+  },
+  {
+    "_id": {
+      "$oid": "B0123456789ABCDEF0123456"
+    },
+    "name": "Beltrano",
+    "age": 38,
+    "gender": "male",
+    "has_vehicle": false,
+    "license_type": "E",
+    "is_loaded": true,
+    "vehicle_type": 2
+  },
+  {
+    "_id": {
+      "$oid": "C0123456789ABCDEF0123456"
+    },
+    "name": "Cicrana",
+    "age": 42,
+    "gender": "female",
+    "has_vehicle": false,
+    "license_type": "D",
+    "is_loaded": false,
+    "vehicle_type": 4
+  },
+  {
+    "_id": {
+      "$oid": "D0123456789ABCDEF0123456"
+    },
+    "name": "Deltrano",
+    "age": 50,
+    "gender": "male",
+    "has_vehicle": true,
+    "license_type": "C",
+    "is_loaded": true,
+    "vehicle_type": 1
+  },
+  {
+    "_id": {
+      "$oid": "E0123456789ABCDEF0123456"
+    },
+    "name": "Eltrana",
+    "age": 46,
+    "gender": "female",
+    "has_vehicle": true,
+    "license_type": "E",
+    "is_loaded": true,
+    "vehicle_type": 5
+  },
+  {
+    "_id": {
+      "$oid": "00123456789ABCDEF0123456"
+    },
+    "name": "Oletano",
+    "age": 55,
+    "gender": "male",
+    "has_vehicle": false,
+    "license_type": "E",
+    "is_loaded": false,
+    "vehicle_type": 2
+  }
+]
