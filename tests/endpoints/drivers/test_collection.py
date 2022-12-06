@@ -1,5 +1,4 @@
 import json
-from falcon.testing import TestClient
 
 def test_index(client):
     resp = client.simulate_get('/drivers')
@@ -8,7 +7,7 @@ def test_index(client):
     assert len(resp.json) == 6
 
 
-def test_create(client: TestClient, mongodb):
+def test_create(client):
     driver = {
         'name': 'Adamastor',
         'age': 38,
