@@ -5,6 +5,7 @@ from bson.json_util import dumps, loads
 
 
 from .endpoints.drivers.collection import DriversCollection
+from .endpoints.drivers.entity import DriversEntity
 from .config import Config
 
 class Base:
@@ -21,6 +22,8 @@ def create_app(config=None, mongodb=None):
     mongodb = mongodb or MongoClient(config.mongodb_url)
 
     drivers_collection = DriversCollection(mongodb)
+    drivers_entity = DriversEntity(mongodb)
+
     app = asgi.App()
     extra_handlers = {
         'application/json': media.JSONHandler(dumps=dumps, loads=loads)
@@ -34,6 +37,7 @@ def create_app(config=None, mongodb=None):
     app.add_route('/drivers', drivers_collection)
     app.add_route('/drivers/truck', drivers_collection, suffix='truck')
     app.add_route('/drivers/unloaded', drivers_collection, suffix='unloaded')
+    app.add_route('/drivers/{id:ObjectId}', drivers_entity)
 
     return app
 
