@@ -1,7 +1,6 @@
-import falcon.asgi
-import logging
-
+from falcon import asgi, media
 from pymongo import MongoClient
+from bson.json_util import dumps, loads
 
 from .config import Config
 
@@ -14,9 +13,14 @@ def create_app(config=None, mongodb=None):
     config = config or Config()
     mongodb = mongodb or MongoClient(config.mongodb_url)
 
-    app = falcon.asgi.App()
+    app = asgi.App()
     app.add_route('/', Base())
-    app.add_route('/drivers', Drivers())
+    extra_handlers = {
+        'application/json': media.JSONHandler(dumps=dumps, loads=loads)
+    }
+
+    app.req_options.media_handlers.update(extra_handlers)
+    app.resp_options.media_handlers.update(extra_handlers)
 
     return app
 
