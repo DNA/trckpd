@@ -1,6 +1,8 @@
 [
   {
-    "arrived_at": "2022-11-25T18:47:33.000Z",
+    "arrived_at": {
+      "$date": "2022-11-25T18:47:33"
+    },
     "origin": {
       "latitude": -23.550520,
       "longitude": -46.633308
@@ -10,14 +12,13 @@
       "longitude": -46.564850
     },
     "driver": {
-      "$ref": "drivers",
-      "$id": {
-        "$oid": "F0123456789ABCDEF0123456"
-      }
+      "$oid": "F0123456789ABCDEF0123456"
     }
   },
   {
-    "arrived_at": "2022-11-30T13:22:57.000Z",
+    "arrived_at": {
+      "$date": "2022-11-30T13:22:57"
+    },
     "origin": {
       "latitude": -12.977749,
       "longitude": -38.501629
@@ -27,28 +28,26 @@
       "longitude": -51.070534
     },
     "driver": {
-      "$ref": "drivers",
-      "$id": {
-        "$oid": "B0123456789ABCDEF0123456"
-      }
+      "$oid": "B0123456789ABCDEF0123456"
     }
   },
   {
-    "arrived_at": "2022-12-06T11:15:03.000Z",
+    "arrived_at": {
+      "$date": "2022-12-06T11:15:03"
+    },
     "origin": {
       "latitude": -8.0584933,
       "longitude": -34.8848193
     },
     "destination": false,
     "driver": {
-      "$ref": "drivers",
-      "$id": {
-        "$oid": "C0123456789ABCDEF0123456"
-      }
+      "$oid": "C0123456789ABCDEF0123456"
     }
   },
   {
-    "arrived_at": "2022-12-06T12:13:11.000Z",
+    "arrived_at": {
+      "$date": "2022-12-06T12:13:11"
+    },
     "origin": {
       "latitude": -23.310209,
       "longitude": -51.368931
@@ -58,38 +57,49 @@
       "longitude": -59.9825041
     },
     "driver": {
-      "$ref": "drivers",
-      "$id": {
-        "$oid": "D0123456789ABCDEF0123456"
-      }
+      "$oid": "D0123456789ABCDEF0123456"
     }
   },
   {
-    "arrived_at": "2022-12-06T14:44:53.000Z",
+    "arrived_at": {
+      "$date": "2022-12-06T14:44:53"
+    },
     "origin": false,
     "destination": {
       "latitude": -3.1316333,
       "longitude": -59.9825041
     },
     "driver": {
-      "$ref": "drivers",
-      "$id": {
-        "$oid": "E0123456789ABCDEF0123456"
-      }
+      "$oid": "E0123456789ABCDEF0123456"
     }
   },
   {
-    "arrived_at": "2022-12-06T17:30:55.000Z",
+    "arrived_at": {
+      "$date": "2022-12-06T17:30:55"
+    },
     "origin": {
       "latitude": -21.707324,
       "longitude": -47.477943
     },
     "destination": false,
     "driver": {
-      "$ref": "drivers",
-      "$id": {
-        "$oid": "00123456789ABCDEF0123456"
-      }
+      "$oid": "00123456789ABCDEF0123456"
+    }
+  },
+  {
+    "arrived_at": {
+      "$date": "2022-12-06T20:11:13"
+    },
+    "origin": {
+      "latitude": -23.689842,
+      "longitude": -46.564850
+    },
+    "destination": {
+      "latitude": -23.550520,
+      "longitude": -46.633308
+    },
+    "driver": {
+      "$oid": "F0123456789ABCDEF0123456"
     }
   }
 ]

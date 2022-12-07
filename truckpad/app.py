@@ -3,9 +3,9 @@ from pymongo import MongoClient
 from bson import ObjectId
 from bson.json_util import dumps, loads
 
-
 from .endpoints.drivers.collection import DriversCollection
 from .endpoints.drivers.entity import DriversEntity
+from .endpoints.terminal import Terminal
 from .config import Config
 
 class Base:
@@ -38,6 +38,9 @@ def create_app(config=None, mongodb=None):
     app.add_route('/drivers/truck', drivers_collection, suffix='truck')
     app.add_route('/drivers/unloaded', drivers_collection, suffix='unloaded')
     app.add_route('/drivers/{id:ObjectId}', drivers_entity)
+    app.add_route('/terminal', Terminal(mongodb))
+    app.add_route('/terminal/stats', Terminal(mongodb), suffix='stats')
+    app.add_route('/terminal/trucklist', Terminal(mongodb), suffix='trucklist')
 
     return app
 
