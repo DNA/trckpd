@@ -2,11 +2,9 @@ import falcon.asgi
 import falcon.testing
 import pytest
 
-from truckpad.app import create_app
-from truckpad.config import Config
+from truckpad.server import Server
 
 @pytest.fixture
 def client(mongodb):
-    config = Config()
-    app = create_app(config, mongodb)
+    app = Server(mongodb).create()
     return falcon.testing.TestClient(app)
